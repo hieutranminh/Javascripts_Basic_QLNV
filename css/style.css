@@ -1,0 +1,138 @@
+*,html,body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.form-left {
+    border: 1px solid blueviolet;
+    border-radius: 5px;
+    box-shadow: 0px 0px 8px -2px #9064ca;
+}
+.form {
+    margin-bottom: 80px;
+}
+h3.tieude {
+    background-image: -webkit-linear-gradient(-135deg, #c850c0, #4158d0);
+    background-image: -o-linear-gradient(-135deg, #c850c0, #4158d0);
+    background-image: -moz-linear-gradient(-135deg, #c850c0, #4158d0);
+    background-image: linear-gradient(-135deg, #c850c0, #4158d0);
+    color: white;
+    font-size: 25px;
+    text-transform: uppercase;
+    padding: 15px 0px;
+    width: 100%;
+}
+.form-left .form-control {
+    border: 1px solid rgba(124, 121, 121, 0.55);
+    outline: none;
+    background: rgba(230, 230, 230, 0.2);
+    border-radius: inherit;
+    -webkit-border-radius: inherit;
+    -moz-border-radius: inherit;
+    -ms-border-radius: inherit;
+    -o-border-radius: inherit;
+}
+.form-left .form-control:disabled {
+    background-color: #dfdfdf;
+    border: 1px solid black;
+}
+.form-left .form-control:focus{
+    border: 1px solid blue;
+    box-shadow: none;
+}
+.form-left .form-control::placeholder{
+    color:rgba(128, 128, 128, 0.808);
+}
+#themNhanVien,#luuNhanVien {
+    width: 100%;
+    margin-bottom: 25px;
+    border: none;
+    background: mediumpurple;
+    font-weight: bold;
+    font-size: 18px;
+}
+#themNhanVien:hover,#luuNhanVien:hover {
+    background: #c850c0;
+}
+.sp-thongbao {
+    color: red;
+}
+.form-left .form-group label {
+    color: blueviolet;
+    font-weight: bold;
+    border-bottom: 1px dashed;
+}
+.select_search {
+    padding: 5px 10px;
+    font-weight: bold;
+    border: none;
+    border-bottom: 2px solid mediumpurple;
+    color: mediumpurple;
+    outline: none;
+    width: 100%;
+}
+#txtSearch {
+    width: 100%;
+    padding: 5px 15px;
+    border-radius: 30px;
+    border: 1px solid mediumpurple;
+    outline: none;
+    background: rgba(0, 0, 0, 0.05);
+}
+.title_chitiet {
+    color: mediumpurple;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 2px cadetblue;
+    border: 2px solid;
+    padding: 10px 0px;
+    border-radius: 30px;
+    background: rgba(220, 220, 220, 0.12);
+    box-shadow: 0px 3px 10px -5px blue;
+}
+.motchitiet {
+    margin: 25px 50px;
+}
+
+.motchitiet b {
+    font-size: 18px;
+    color: mediumpurple;
+}
+.motchitiet span {
+    font-size: 18px;
+    color: black;
+    border-bottom: 1px dashed;
+}
+.myThead{
+    background-image: -webkit-linear-gradient(-135deg, #c850c0, #4158d0);
+    background-image: -o-linear-gradient(-135deg, #c850c0, #4158d0);
+    background-image: -moz-linear-gradient(-135deg, #c850c0, #4158d0);
+    background-image: linear-gradient(-135deg, #c850c0, #4158d0);
+    color:white;
+}
+.line {
+    width: 100%;
+    background: mediumpurple;
+    height: 4px;
+    margin: auto;
+}
+.table-bordered td, .table-bordered th {
+    border: 1px solid mediumpurple;
+    vertical-align: middle;
+}
+.btn_luongMax {
+    width: 100%;
+    background: mediumpurple;
+    font-weight: bold;
+    border: none;
+    outline: none;
+}
+.btn_luongMax:hover{
+    background: #c850c0;
+}
+@media only screen and (max-width: 992px) and (min-width: 577px){
+    *{}
+    .motchitiet {
+        margin-left: 0px;
+    }
+  }

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>QL-NhanVien</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <section class="container-fluid form">
+        <div class="row">
+            <!-- DIV FORM THEM -->
+            <div class="col-md-7 col-lg-6">
+                <form action="#" method="POST">
+                    <div class="row form-left">
+                        <div class="col-md-12">
+                            <div class="row">
+                                <h3 class="tieude text-center m-0 mb-4">Quản Lý Nhân Viên</h3>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="">Tên nhân viên</label>
+                                <input type="text" name="ten" id="ten" value="sadas" class="form-control" placeholder="Tran Minh A"
+                                    aria-describedby="helpId">
+                                <span class="sp-thongbao" id="tbTen"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="">Mã nhân viên</label>
+                                <input type="text" name="ma" id="ma" class="form-control" placeholder="001"
+                                    aria-describedby="helpId">
+                                <span class="sp-thongbao" id="tbMa"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="">Email</label>
+                                <input type="text" name="email" id="email" class="form-control" placeholder="example@gmail.com"
+                                    aria-describedby="helpId">
+                                <span class="sp-thongbao" id="tbEmail"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="">Số điện thoại</label>
+                                <input type="text" name="sdt" id="sdt" class="form-control" placeholder="19001080"
+                                    aria-describedby="helpId">
+                                <span class="sp-thongbao" id="tbSoDT"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="">Ngày sinh</label>
+                                <input type="date" name="ngaySinh" id="ngaySinh" class="form-control " aria-describedby="helpId">
+                                <span class="sp-thongbao" id="tbNgay"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="">Lương cơ bản</label>
+                                <input type="text" name="luongCB" id="luongCB" class="form-control" placeholder="300000"
+                                    aria-describedby="helpId">
+                                <span class="sp-thongbao" id="tbLuong"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="">Số ngày làm việc</label>
+                                <input type="text" name="soNgayLam" id="soNgayLam" class="form-control" placeholder="30"
+                                    aria-describedby="helpId">
+                                <span class="sp-thongbao" id="tbSoNgayLam"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="">Phụ cấp</label>
+                                <input type="text" name="phuCap" id="phuCap" class="form-control" placeholder="150000"
+                                    aria-describedby="helpId">
+                                <span class="sp-thongbao" id="tbPhuCap"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="">Chúc vụ</label>
+                                <select class="form-control" name="chucVu" id="chucVu">
+                                    <option>Chọn chức vụ</option>
+                                    <option>Sếp</option>
+                                    <option>Trưởng phòng</option>
+                                    <option>Nhân viên</option>
+                                </select>
+                                <span class="sp-thongbao" id="tbChucVu"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-12 mt-3 mb-2">
+                            <input type="button" class="btn btn-success" id="themNhanVien" value="Thêm nhân viên" />
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <!-- DIV Hiển thị sau khi thêm -->
+            <div class="col-md-5 col-lg-6">
+                <h3 class="text-center title_chitiet mt-4 mt-sm-0">Chi tiết nhân viên vừa thêm</h3>
+                <div class="chitiet">
+                    <div class="motchitiet">
+                        <b>Tên nhân viên : </b><span id="htTen"></span>
+                    </div>
+                    <div class="motchitiet">
+                        <b>Mã nhân viên : </b><span id="htMa"></span>
+                    </div>
+                    <div class="motchitiet">
+                        <b>Email : </b><span id="htEmail"></span>
+                    </div>
+                    <div class="motchitiet">
+                        <b>Số điện thoại : </b><span id="htSDT"></span>
+                    </div>
+                    <div class="motchitiet">
+                        <b>Ngày sinh : </b><span id="htNgaySinh"></span>
+                    </div>
+                    <div class="motchitiet">
+                        <b>Lương cơ bản : </b><span id="htLuongCB"></span>
+                    </div>
+                    <div class="motchitiet">
+                        <b>Số ngày làm việc : </b><span id="htSoNgayLam"></span>
+                    </div>
+                    <div class="motchitiet">
+                        <b>Phụ cấp : </b><span id="htPhuCap"></span>
+                    </div>
+                    <div class="motchitiet">
+                        <b>Chức vụ : </b><span id="htChucVu"></span>
+                    </div>
+                    <div class="line"></div>
+                    <div class="motchitiet">
+                        <b>Tổng lương : </b><span id="htTongLuong"></span>
+                    </div>
+                </div>
+            </div>
+            <!-- DIV SEARCH và TABLE -->
+            <div class="col-md-12 ">
+                <!-- SEARCH -->
+                <div class="row mt-4">
+                    <div class="col-5 col-md-4 col-lg-2">
+                        <select class="select_search" name="search" id="search">
+                            <option>Tìm theo Mã</option>
+                            <option>Tìm theo Tên</option>
+                        </select>
+                    </div>
+                    <div class="col-7 col-md-8 col-lg-4 mb-md-3">
+                        <input type="text" name="txtSearch" id="txtSearch" placeholder="Search">
+                    </div>
+                    <div class="col-lg-3 col-md-6 my-3 mt-md-0">
+                        <select class="select_search" name="sapXep" id="sapXep">
+                            <option>Sắp xếp theo :</option>
+                            <option>Lương giảm dần</option>
+                            <option>Thứ tự tên NV theo bảng chữ cái</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <button class="btn btn-info btn_luongMax" id="btn_luongMax">Nhân viên Lương cao nhất</button>
+                    </div>
+                </div>
+                <!-- TABLE -->
+                <table class="table table-bordered mt-4 table-responsive-lg">
+                    <thead class="thead-default myThead">
+                        <tr>
+                            <th>Tên NV</th>
+                            <th>Mã NV</th>
+                            <th>Email</th>
+                            <th>SDT</th>
+                            <th>Ngày Sinh</th>
+                            <th>Chức Vụ</th>
+                            <th>Tổng Lương</th>
+                            <th>Thao Tác</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody">
+    
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+    <!-- POPUP MODAL -->
+    <!-- Button trigger modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content border border-0">
+                <div class="container">
+                    <div class="row form-left">
+                        <div class="col-md-12">
+                            <div class="row">
+                                <h3 class="tieude text-center m-0 mb-4">Sửa Danh Sách Nhân Viên</h3>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="">Tên nhân viên</label>
+                                <input type="text" name="editTen" id="editTen" class="form-control">
+                                <!-- <span class="sp-thongbao" id="tbTen"></span> -->
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="">Mã nhân viên</label>
+                                <input type="text" name="editMa" id="editMa" class="form-control" disabled >
+                                <!-- <span class="sp-thongbao" id="tbMa"></span> -->
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="">Email</label>
+                                <input type="text" name="editEmail" id="editEmail" class="form-control">
+                                <!-- <span class="sp-thongbao" id="tbEmail"></span> -->
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="">Số điện thoại</label>
+                                <input type="text" name="editSDT" id="editSDT" class="form-control">
+                                <!-- <span class="sp-thongbao" id="tbSoDT"></span> -->
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="">Ngày sinh</label>
+                                <input type="date" name="editNgaySinh" id="editNgaySinh" class="form-control">
+                                <!-- <span class="sp-thongbao" id="tbNgay"></span> -->
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="">Lương cơ bản</label>
+                                <input type="text" name="editLuongCB" id="editLuongCB" class="form-control">
+                                <!-- <span class="sp-thongbao" id="tbLuong"></span> -->
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="">Số ngày làm việc</label>
+                                <input type="text" name="editSoNgayLam" id="editSoNgayLam" class="form-control">
+                                <!-- <span class="sp-thongbao" id="tbSoNgayLam"></span> -->
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="">Phụ cấp</label>
+                                <input type="text" name="editPhuCap" id="editPhuCap" class="form-control">
+                                <!-- <span class="sp-thongbao" id="tbPhuCap"></span> -->
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="">Chúc vụ</label>
+                                <select class="form-control" name="editChucVu" id="editChucVu">
+                                    <option>Chọn chức vụ</option>
+                                    <option>Sếp</option>
+                                    <option>Trưởng phòng</option>
+                                    <option>Nhân viên</option>
+                                </select>
+                                <!-- <span class="sp-thongbao" id="tbChucVu"></span> -->
+                            </div>
+                        </div>
+                        <div class="col-md-12 mt-3 mb-2">
+                            <input type="button" data-dismiss="modal" class="btn btn-success" id="luuNhanVien" value="Lưu lại" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SCRIPTS FILE -->
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/sweetalert2.all.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/nhanvien.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>
+
